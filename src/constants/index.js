@@ -137,9 +137,9 @@ export const experiences = [
     job: "Software Developer Intern",
     date: "Salesforce",
     contents: [
-      "Engineered a scalable backend microservice in Go to orchestrate asynchronous bulk entitlement metadata ingestion and validation workflows.",
-      "Designed the architecture using AWS S3 for secure storage and DynamoDB for fast, low-latency operations, enhancing data processing efficiency for enterprise-scale clients.",
-      "Enhanced user workflows with React-based front-end components, ensuring seamless integration with backend services and improving overall system usability.",
+      "• Engineered a scalable backend microservice in Go to orchestrate asynchronous bulk entitlement metadata ingestion and validation workflows.",
+      "• Designed the architecture using AWS S3 for secure storage and DynamoDB for fast, low-latency operations, enhancing data processing efficiency for enterprise-scale clients.",
+      "• Enhanced user workflows with React-based front-end components, ensuring seamless integration with backend services and improving overall system usability.",
     ],
   },
   {
@@ -147,9 +147,9 @@ export const experiences = [
     job: "Head of Social Media & Design",
     date: "Global Pathfinders",
     contents: [
-      "Led the end-to-end design and execution of social media campaigns, aligning creative strategy with organizational goals.",
-      "Designed visually engaging digital content, including graphics, promotional materials, and campaign assets, to strengthen brand presence.",
-      "Collaborated with cross-functional teams to craft a consistent brand identity across platforms, enhancing audience reach and engagement.",
+      "• Led the end-to-end design and execution of social media campaigns, aligning creative strategy with organizational goals.",
+      "• Designed visually engaging digital content, including graphics, promotional materials, and campaign assets, to strengthen brand presence.",
+      "• Collaborated with cross-functional teams to craft a consistent brand identity across platforms, enhancing audience reach and engagement.",
     ]
   },
 ];
@@ -175,7 +175,7 @@ export const education = [
       "Percentage: 98.50%",
       "Subjects: Physics, Chemistry, Mathematics, English, Computer Science, Physical Education",
     ],
-    images: ["/assets/education/school.jpg", "/assets/education/school1.jpg"],
+    images: ["/assets/education/school2.jpg", "/assets/education/school1.jpg"],
   },
   {
     degree: "Secondary Education (ICSE Board)",
@@ -185,7 +185,7 @@ export const education = [
       "Percentage: 93.25%",
       "Subjects: Mathematics, Physics, Chemistry, Biology, History & Civics, Geography, English, Hindi, Computer Applications",
     ],
-    images: ["/assets/education/school2.jpg", "/assets/education/school3.jpg"],
+    images: ["/assets/education/school1.jpg", "/assets/education/school3.jpg"],
   },
 ];
 

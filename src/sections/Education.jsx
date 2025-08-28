@@ -1,9 +1,9 @@
-import { motion } from "motion/react"; 
+import { motion } from "motion/react";
 import { education } from "../constants";
 
 const Education = () => {
   return (
-    <section id="education" className="relative c-space section-spacing">
+    <section id="education" className="relative c-space mt-22">
       <h2 className="text-heading">My Academic Journey</h2>
 
       <div className="relative mt-28">
@@ -12,9 +12,9 @@ const Education = () => {
           <div className="w-px h-full bg-gradient-to-b from-transparent via-fuchsia-500/70 to-transparent animate-pulseGlow" />
         </div>
 
-        <ul className="space-y-40">
+        <ul className="space-y-30">
           {education.map((item, idx) => {
-            const imageOnRight = idx % 2 === 0; 
+            const imageOnRight = idx % 2 === 0;
             return (
               <li
                 key={idx}
@@ -60,7 +60,6 @@ function Content({ degree, institution, duration, details = [], side }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.5 }}
-        
         className="w-full max-w-4xl p-6 border rounded-2xl bg-primary/70 border-white/20 backdrop-blur-lg shadow-xl"
       >
         {/* Header */}
@@ -81,41 +80,27 @@ function Content({ degree, institution, duration, details = [], side }) {
   );
 }
 
-/* ---------- Illustration ---------- */
-function Illustration({ images = [], alt = "", side }) {
+/* ---------- Illustration with Single Silver Glow ---------- */
+function Illustration({ images = [], alt = "" }) {
   const mainSrc = images[0];
-  const smallSrc = images[1];
-  const overlapClass = side === "right" ? "-left-12" : "-right-12";
 
   return (
     <div className="relative flex justify-center lg:justify-center">
-      <div className="relative inline-block">
-        {smallSrc && (
-          <div
-            className={`absolute -bottom-8 ${overlapClass} w-36 h-36 lg:w-44 lg:h-44 overflow-hidden rounded-full shadow-md ring-2 ring-white/10 z-0`}
-          >
-            <img
-              src={smallSrc}
-              alt={alt}
-              className="object-cover w-full h-full"
-              onError={(e) => (e.currentTarget.style.display = "none")}
-            />
-          </div>
+      <div 
+        className="relative overflow-hidden rounded-full shadow-2xl ring-2 ring-white/20 w-72 h-72 lg:w-80 lg:h-80 transition-transform duration-300 hover:scale-105"
+        style={{ boxShadow: '0 0 50px rgba(169, 169, 169, 0.6)' }}
+      >
+        {mainSrc && (
+          <img
+            src={mainSrc}
+            alt={alt}
+            className="object-cover w-full h-full"
+            onError={(e) => (e.currentTarget.style.display = "none")}
+          />
         )}
-
-        <div className="relative overflow-hidden rounded-full shadow-2xl ring-2 ring-white/20 w-72 h-72 lg:w-80 lg:h-80 z-10">
-          {mainSrc && (
-            <img
-              src={mainSrc}
-              alt={alt}
-              className="object-cover w-full h-full"
-              onError={(e) => (e.currentTarget.style.display = "none")}
-            />
-          )}
-        </div>
       </div>
     </div>
   );
-}  
+}
 
 export default Education;
