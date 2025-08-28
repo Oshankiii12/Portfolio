@@ -1,222 +1,112 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Easy Exit",
     description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
+      "A microservices-based web application that automates gatepass requests, approvals, and verification, streamlining the exit process for students and institutions.",
     subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
+      "Developed secure REST APIs with SpringBoot for handling gatepass requests and approvals. Integrated MongoDB for efficient storage and retrieval of student and gatepass records.",
+      "Built a responsive user interface with ReactJS for seamless student and admin interactions. Eliminated manual paperwork and significantly improved processing time through digital automation.",
     ],
-    href: "",
+    href: "https://easyexit.onrender.com",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/EasyExit.png",
     tags: [
       {
         id: 1,
-        name: "C#",
+        name: "SpringBoot",
         path: "/assets/logos/csharp.svg",
       },
       {
         id: 2,
-        name: ".Net",
+        name: "MongoDB",
         path: "/assets/logos/dotnet.svg",
       },
       {
         id: 3,
-        name: "Ef Core",
-        path: "/assets/logos/efcore.png",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        name: "ReactJS",
+        path: "/assets/react.svg",
       },
     ],
   },
   {
     id: 2,
-    title: "Authentication & Authorization System",
+    title: "SimulateX",
     description:
-      "A secure authentication and authorization system using Auth0 for seamless user management.",
+      "A powerful desktop-based simulation tool for electronic circuit design and real-time analysis, built with Java technologies to provide engineers and students with an interactive environment for experimentation.",
     subDescription: [
-      "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
-      "Implemented role-based access control (RBAC) for fine-grained user permissions.",
-      "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure SQLite database for user data storage.",
+      "Architected and delivered a feature-rich simulator using Java, JavaFX, and Swing for intuitive and dynamic circuit visualization.",
+      "Integrated automated testing frameworks ensuring high reliability, accuracy, and faster validation of simulation results.",
+      "Designed a modular architecture to support extensibility for future circuit components and advanced analysis features.",
     ],
-    href: "",
+    href: "https://easyexit.onrender.com",
     logo: "",
-    image: "/assets/projects/auth-system.jpg",
+    image: "/assets/simulateX.png",
     tags: [
       {
         id: 1,
-        name: "Auth0",
-        path: "/assets/logos/auth0.svg",
+        name: "Java",
+        path: "/assets/logos/java.svg",
       },
       {
         id: 2,
-        name: "React",
-        path: "/assets/logos/react.svg",
+        name: "JavaFX",
+        path: "/assets/logos/javafx.svg",
       },
       {
         id: 3,
+        name: "JUnit",
+        path: "/assets/logos/junit.svg",
+      },
+      {
+        id: 4,
         name: "SQLite",
         path: "/assets/logos/sqlite.svg",
       },
       {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        id: 5,
+        name: "Maven",
+        path: "/assets/logos/maven.svg",
       },
     ],
   },
   {
     id: 3,
-    title: "Blazor Web App",
+    title: "Medify.AI",
     description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
+      "An AI-powered healthcare platform that provides diagnosis suggestions and enables efficient management of patient diagnostics.",
     subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
-      "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
+      "Designed and implemented machine learning pipelines using NumPy and Pandas for AI-assisted diagnosis suggestions.",
+      "Integrated Firebase for authentication and real-time data synchronization.",
+      "Built a ReactJS-based frontend to deliver an intuitive user experience.",
     ],
-    href: "",
+    href: "https://easyexit.onrender.com",
     logo: "",
-    image: "/assets/projects/blazor-app.jpg",
+    image: "/assets/medify.png",
     tags: [
       {
         id: 1,
-        name: "Blazor",
+        name: "Flask",
         path: "/assets/logos/blazor.svg",
       },
       {
         id: 2,
-        name: ".NET Core",
+        name: "ReactJS",
         path: "/assets/logos/dotnetcore.svg",
       },
       {
         id: 3,
-        name: "SQLite",
+        name: "NumPy",
         path: "/assets/logos/sqlite.svg",
       },
       {
         id: 4,
-        name: "TailwindCSS",
+        name: "Pandas",
         path: "/assets/logos/tailwindcss.svg",
       },
-    ],
-  },
-  {
-    id: 4,
-    title: "C++ Game Engine",
-    description:
-      "A lightweight C++ game engine designed for 2D and 3D game development.",
-    subDescription: [
-      "Built a powerful rendering engine using OpenGL and C++.",
-      "Developed a physics engine with collision detection and particle effects.",
-      "Implemented a scripting system for easy game customization.",
-      "Optimized performance with multi-threading and efficient memory management.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/game-engine.jpg",
-    tags: [
       {
-        id: 1,
-        name: "C++",
-        path: "/assets/logos/cplusplus.svg",
-      },
-      {
-        id: 2,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
-      },
-      {
-        id: 3,
-        name: "Git",
-        path: "/assets/logos/git.svg",
-      },
-      {
-        id: 4,
-        name: "Microsoft",
-        path: "/assets/logos/microsoft.svg",
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: "WordPress Custom Theme",
-    description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
-    subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/wordpress-theme.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "WordPress",
-        path: "/assets/logos/wordpress.svg",
-      },
-      {
-        id: 2,
-        name: "HTML5",
-        path: "/assets/logos/html5.svg",
-      },
-      {
-        id: 3,
-        name: "CSS3",
-        path: "/assets/logos/css3.svg",
-      },
-      {
-        id: 4,
-        name: "Vite.js",
-        path: "/assets/logos/vitejs.svg",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Online Learning Platform",
-    description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
-    subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/elearning.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: "Azure",
-        path: "/assets/logos/azure.svg",
-      },
-      {
-        id: 3,
-        name: "Stripe",
-        path: "/assets/logos/stripe.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
+        id: 5,
+        name: "Firebase",
         path: "/assets/logos/tailwindcss.svg",
       },
     ],
@@ -243,86 +133,59 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: "Software Developer",
-    job: "Security & Defense Projects",
-    date: "2021-2023",
+    title: "May 2025 - Jul 2025",
+    job: "Software Developer Intern",
+    date: "Salesforce",
     contents: [
-      "Enhanced application security and developed new features, adhering to standards set by the Passive Defense Organization and National Cyberspace Center.",
-      "Designed and implemented intuitive map interfaces using MapsUI, enhancing user experience and enabling seamless interactive map integration.",
-      "Developed applications for industrial automation, leveraging C++ and the Fatek API for PLC communication.",
-      "Enhanced responsiveness and usability of applications using Windows Forms and WPF frameworks.",
-      "Executed XML to SVG conversions using X-DOM, ensuring dynamic and efficient data visualization.",
+      "Engineered a scalable backend microservice in Go to orchestrate asynchronous bulk entitlement metadata ingestion and validation workflows.",
+      "Designed the architecture using AWS S3 for secure storage and DynamoDB for fast, low-latency operations, enhancing data processing efficiency for enterprise-scale clients.",
+      "Enhanced user workflows with React-based front-end components, ensuring seamless integration with backend services and improving overall system usability.",
     ],
   },
   {
-    title: "Back-End Developer",
-    job: "Car Manufacture",
-    date: "2023-2024",
+    title: "Oct 2023 - Apr 2024",
+    job: "Head of Social Media & Design",
+    date: "Global Pathfinders",
     contents: [
-      "Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
-      "Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
-      "✅ Implemented secure APIs, following ISO 26262 automotive safety standards.",
-      "✅ Ensured data privacy for customers and partners through industry-compliant protocols.",
-      "✅ Delivered remote features like over-the-air updates, real-time tracking, and remote start capabilities.",
-    ],
-  },
-  {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    date: "2025-Present",
-    contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
-    ],
+      "Led the end-to-end design and execution of social media campaigns, aligning creative strategy with organizational goals.",
+      "Designed visually engaging digital content, including graphics, promotional materials, and campaign assets, to strengthen brand presence.",
+      "Collaborated with cross-functional teams to craft a consistent brand identity across platforms, enhancing audience reach and engagement.",
+    ]
   },
 ];
-export const reviews = [
+
+// src/constants/index.js
+export const education = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://robohash.org/jack",
+    degree: "B.Tech, Electronics & Communication Engineering",
+    institution: "Indian Institute of Information Technology, Allahabad",
+    duration: "2022 – 2026",
+    details: [
+      "Core coursework: Digital Electronics, Signals & Systems, Microcontrollers, Computer Architecture",
+      "Hands-on experience through projects and laboratory work in circuits, embedded systems, and IoT applications.",
+      "CGPA: 7.78 / 10",
+    ],
+    images: ["/assets/education/college.jpg", "/assets/education/college1.jpg"],
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://robohash.org/jill",
+    degree: "Senior Secondary Education (ISC Board)",
+    institution: "City Montessori School, Kanpur Road Campus",
+    duration: "2020 - 2021",
+    details: [
+      "Percentage: 98.50%",
+      "Subjects: Physics, Chemistry, Mathematics, English, Computer Science, Physical Education",
+    ],
+    images: ["/assets/education/school.jpg", "/assets/education/school1.jpg"],
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://robohash.org/john",
-  },
-  {
-    name: "Alice",
-    username: "@alice",
-    body: "This is hands down the best thing I've experienced. Highly recommend!",
-    img: "https://robohash.org/alice",
-  },
-  {
-    name: "Bob",
-    username: "@bob",
-    body: "Incredible work! The attention to detail is phenomenal.",
-    img: "https://robohash.org/bob",
-  },
-  {
-    name: "Charlie",
-    username: "@charlie",
-    body: "This exceeded all my expectations. Absolutely stunning!",
-    img: "https://robohash.org/charlie",
-  },
-  {
-    name: "Dave",
-    username: "@dave",
-    body: "Simply breathtaking. The best decision I've made in a while.",
-    img: "https://robohash.org/dave",
-  },
-  {
-    name: "Eve",
-    username: "@eve",
-    body: "So glad I found this. It has changed the game for me.",
-    img: "https://robohash.org/eve",
+    degree: "Secondary Education (ICSE Board)",
+    institution: "City Montessori School, Kanpur Road Campus",
+    duration: "2018 - 2019",
+    details: [
+      "Percentage: 93.25%",
+      "Subjects: Mathematics, Physics, Chemistry, Biology, History & Civics, Geography, English, Hindi, Computer Applications",
+    ],
+    images: ["/assets/education/school2.jpg", "/assets/education/school3.jpg"],
   },
 ];
+
