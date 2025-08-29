@@ -29,16 +29,16 @@ const Contact = () => {
 
     try {
       console.log("From submitted:", formData);
-        // 1. Send submission to YOU
+      
     await emailjs.send(
-      "service_xwvkfsl",        // your service ID
-      "template_lrtww3x",      // Template A ID
+      "service_xwvkfsl",       
+      "template_lrtww3x",      
       {
         name: formData.name,
         from_email: formData.email,
         message: formData.message,
       },
-      "13HNUxg3l4EOjZEff"       // your public key
+      "13HNUxg3l4EOjZEff"      
     );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
@@ -50,7 +50,7 @@ const Contact = () => {
     }
   };
   return (
-    <section className="relative flex items-center c-space section-spacing">
+    <section id="contact" className="relative flex items-center c-space overflow-hidden mt-50 sm:mt-50">
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
@@ -59,7 +59,7 @@ const Contact = () => {
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
+      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary mb-28">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Contact Me</h2>
           <p className="font-normal text-neutral-400">
