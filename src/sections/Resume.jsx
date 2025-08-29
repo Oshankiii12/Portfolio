@@ -1,9 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Particles } from "../components/Particles";
 
 const Resume = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Handle back button
+  useEffect(() => {
+    const handlePopState = () => {
+      setIsOpen(false);
+    };
+
+    if (isOpen) {
+      window.history.pushState({ modal: true }, ""); // push new state
+      window.addEventListener("popstate", handlePopState);
+    }
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [isOpen]);
 
   return (
     <section
@@ -20,7 +36,7 @@ const Resume = () => {
       />
 
       {/* Container */}
-      <div className="relative w-full max-w-6xl p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
+      <div className="relative w-8/9 max-w-6xl p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
         <div className="grid items-center grid-cols-1 gap-14 lg:grid-cols-2">
           
           {/* Left Column: Resume Preview */}
@@ -29,14 +45,10 @@ const Resume = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center w-full lg:w-[95%] group"
+            className="flex justify-center w-full lg:w-[95%] group cursor-pointer"
+            onClick={() => setIsOpen(true)}
           >
-            <div
-              className="relative p-4 rounded-lg shadow-xl bg-neutral-800 
-                         transition-all duration-300 group-hover:bg-neutral-700 
-                         group-hover:scale-105 group-hover:shadow-[0_0_25px_rgba(192,192,192,0.7)] cursor-pointer"
-              onClick={() => setIsOpen(true)}
-            >
+            <div className="relative p-4 rounded-lg shadow-xl bg-neutral-800 transition-all duration-300 group-hover:bg-neutral-700 group-hover:scale-105">
               <img
                 src="/assets/resume.png"
                 alt="Oshanki Priya Resume Preview"
@@ -85,10 +97,10 @@ const Resume = () => {
               download="oshanki-priya-resume.pdf"
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.6)",
+                //boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.6)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="px-12 py-5 text-lg font-medium rounded-xl cursor-pointer bg-radial from-lavender to-royal hover:opacity-90 transition"
+              className="px-10 py-4 text-lg font-medium rounded-xl cursor-pointer bg-radial from-lavender to-royal hover:opacity-90 transition"
             >
               Download Resume
             </motion.a>
@@ -96,29 +108,26 @@ const Resume = () => {
         </div>
       </div>
 
-      {/* Fullscreen Modal */}
+      {/* Fullscreen Modal for Resume Preview */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-5"
-          onClick={() => setIsOpen(false)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+          onClick={() => setIsOpen(false)} // close when clicking background
         >
           <div
-            className="relative max-w-4xl w-full h-auto"
-            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-5xl w-full max-h-[90vh] overflow-y-auto p-6"
+            onClick={(e) => e.stopPropagation()} // prevent close when clicking inside
           >
-            {/* Close Button */}
             <button
-              className="absolute top-3 right-3 text-white text-3xl font-bold hover:text-gray-300"
               onClick={() => setIsOpen(false)}
+              className="absolute top-3 right-3 text-white text-3xl font-bold z-10"
             >
-              ✕
+              &times;
             </button>
-
-            {/* Enlarged Image */}
             <img
               src="/assets/resume.png"
-              alt="Fullscreen Resume Preview"
-              className="w-full h-auto rounded-lg shadow-2xl"
+              alt="Oshanki Priya Full Resume"
+              className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
         </div>
