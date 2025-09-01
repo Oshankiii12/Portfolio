@@ -1,48 +1,50 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+// src/sections/Hero.jsx
+import React from "react";
 import HeroText from "../components/HeroText";
-import ParallaxBackground from "../components/ParallaxBackground";
-import { Astronaut } from "../components/Astronaut";
-import { Float } from "@react-three/drei";
-import { useMediaQuery } from "react-responsive";
-import { easing } from "maath";
-import { Suspense } from "react";
-import Loader from "../components/Loader";
 
-const Hero = () => {
-  const isMobile = useMediaQuery({ maxWidth: 853 });
+export default function Hero() {
   return (
-    <section id="home" className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space">
-      <HeroText />
-      <ParallaxBackground />
-      <figure
-        className="absolute inset-0"
-        style={{ width: "100vw", height: "100vh" }}
-      >
-        <Canvas camera={{ position: [0, 1, 3] }}>
-          <Suspense fallback={<Loader />}>
-            <Float>
-              <Astronaut
-                scale={isMobile && 0.23}
-                position={isMobile && [0, -1.5, 0]}
-              />
-            </Float>
-            <Rig />
-          </Suspense>
-        </Canvas>
-      </figure>
+    <section
+      id="home"
+      className="relative w-full overflow-hidden"
+      style={{ minHeight: "85vh" }}
+    >
+      {/* Background */}
+      <div
+        aria-hidden="true"
+        className="hero-bg-fixed"
+        style={{
+          backgroundImage: "url(/assets/fullbg2.png)",
+        }}
+      />
+      <div className="hero-bg-overlay" aria-hidden="true" />
+
+      {/* Foreground content */}
+      <div className="relative z-20 w-full h-full flex items-center justify-center px-6 md:px-12">
+        <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto">
+          
+          {/* LEFT: Hero text */}
+          <div className="flex-1 flex items-center justify-center md:justify-start">
+            <HeroText />
+          </div>
+
+          {/* RIGHT: Laptop image */}
+          <div className="flex items-center justify-center mt-12 md:mt-40 flex-shrink-0">
+            <img
+              src="/assets/laptop.png"
+              alt="Laptop illustration"
+              loading="eager"
+              decoding="async"
+              className="drop-shadow-[0_24px_60px_rgba(0,0,0,0.35)]"
+              style={{
+                width: "clamp(380px, 75vw, 630px)", // bigger than before
+                height: "auto",
+                objectFit: "contain",
+              }}
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
-};
-
-function Rig() {
-  return useFrame((state, delta) => {
-    easing.damp3(
-      state.camera.position,
-      [state.mouse.x / 10, 1 + state.mouse.y / 10, 3],
-      0.5,
-      delta
-    );
-  });
 }
-
-export default Hero;

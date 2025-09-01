@@ -143,3 +143,41 @@ body {
 .field-input-focus {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
 }
+
+
+/* ------------------------------
+   Hero full-bleed background helpers
+   ------------------------------ */
+
+/* fixed background that fills the viewport exactly (no left/right gutters) */
+.hero-bg-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -50; /* behind content */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* overlay on top of the background for better text contrast */
+.hero-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -40; /* above the fixed background, but still behind content */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.72) 50%,
+    rgba(0, 0, 0, 0.45) 55%,
+    rgba(0, 0, 0, 0.12) 80%,
+    rgba(0, 0, 0, 0) 90%
+  );
+  pointer-events: none;
+}
