@@ -20,7 +20,7 @@ const HeroText = () => {
       {/* Desktop View */}
       <div className="hidden md:flex flex-col c-space space-y-7">
         <motion.span
-          className="uppercase tracking-widest text-white/70 text-xl"
+          className="uppercase tracking-widest text-white/70 text-xl pb-2"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -31,7 +31,7 @@ const HeroText = () => {
 
         <div className="flex flex-col items-start">
           <motion.h1
-            className="text-6xl font-bold leading-[1.07] tracking-tight"
+            className="text-5xl font-bold leading-[1.07] tracking-tight pb-2"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -49,7 +49,7 @@ const HeroText = () => {
           >
             <FlipWords
               words={words}
-              className="font-black text-white text-8xl"
+              className="font-extrabold text-8xl font-sans text-white drop-shadow-[0_0_10px_rgba(168,85,247,0.7)] pb-6"
             />
           </motion.div>
 
