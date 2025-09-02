@@ -3,6 +3,8 @@
 Welcome to my portfolio!
 I’m a Software Developer fueled by curiosity and creativity, passionate about building meaningful projects, embracing new technologies, and tackling real-world challenges with clean and efficient code.
 
+Live Link : https://oshankipriya-portfolio.vercel.app/
+
 ---
 
 ## Tech Stack
@@ -25,16 +27,16 @@ I’m a Software Developer fueled by curiosity and creativity, passionate about 
 
 ```bash
 ├── public/
-│   ├── assets/             # Images, textures, models
-│   ├── models/             # 3D Astronaut model
+│   ├── assets/             
+│   ├── models/             
 │   └── vite.svg
 ├── src/
-│   ├── components/         # Reusable components
-│   ├── constants/          # Reusable datas
-│   ├── sections/           # Portfolio sections (Hero, About, etc.)
-│   ├── App.jsx             # Main app file
-│   ├── index.css           # Tailwind css
-│   └── main.jsx            # Entry point
+│   ├── components/         
+│   ├── constants/          
+│   ├── sections/           
+│   ├── App.jsx             
+│   ├── index.css           
+│   └── main.jsx            
 ├── tailwind.config.js
 └── vite.config.js
 ```
