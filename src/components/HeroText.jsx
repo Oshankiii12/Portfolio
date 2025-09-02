@@ -18,7 +18,7 @@ const HeroText = () => {
     <div className="z-10 mt-20 text-center md:mt-40 md:text-left bg-clip-text">
 
       {/* Desktop View */}
-      <div className="hidden md:flex flex-col c-space space-y-7">
+      <div className="hidden md:flex flex-col c-space space-y-8">
         <motion.span
           className="uppercase tracking-widest text-white/70 text-xl pb-2"
           variants={variants}
